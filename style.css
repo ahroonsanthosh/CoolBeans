@@ -805,10 +805,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   filter: brightness(0.75) saturate(0.8);
   position: relative;
 }
-.gallery__img--1 { background: url('photos/Screenshot 2026-06-26 153855.png') center/cover; }
-.gallery__img--2 { background: url('photos/Screenshot 2026-06-26 153907.png') center/cover; }
-.gallery__img--3 { background: url('photos/Screenshot 2026-06-26 153918.png') center/cover; }
-.gallery__img--4 { background: url('photos/Screenshot 2026-06-26 113359.png') center/cover; }
+.gallery__img--1 { background: url('photos/Screenshot%202026-06-26%20153855.png') center/cover; }
+.gallery__img--2 { background: url('photos/Screenshot%202026-06-26%20153907.png') center/cover; }
+.gallery__img--3 { background: url('photos/Screenshot%202026-06-26%20153918.png') center/cover; }
+.gallery__img--4 { background: url('photos/Screenshot%202026-06-26%20113359.png') center/cover; }
 
 .gallery__item:hover .gallery__img {
   transform: scale(1.06);
