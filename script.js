@@ -1,3 +1,75 @@
+/* ── 3D SCROLL GALLERY ───────────────────────────── */
+(function initScrollGallery() {
+  const track    = document.getElementById('sgTrack');
+  const sticky   = document.getElementById('sgSticky');
+  const slides   = Array.from(document.querySelectorAll('.sg-slide'));
+  const dots     = Array.from(document.querySelectorAll('.sg-dot'));
+  const hint     = document.getElementById('sgHint');
+  const ctaGroup = document.getElementById('sgCta');
+  const continueEl = document.getElementById('sgContinue');
+
+  if (!track) return;
+
+  const TOTAL    = slides.length;           // 5
+  const PER_SLIDE = 1 / TOTAL;             // fraction of track per slide
+  let current    = 0;
+  let transitioning = false;
+
+  function setSlide(idx, direction) {
+    if (idx === current && !direction) return;
+    const prev = current;
+    current = Math.max(0, Math.min(TOTAL - 1, idx));
+
+    slides[prev].classList.remove('active');
+    slides[prev].classList.add('exit');
+    setTimeout(() => slides[prev].classList.remove('exit'), 900);
+
+    slides[current].classList.add('active');
+
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+
+    // Show CTA on last slide
+    ctaGroup.classList.toggle('visible', current === TOTAL - 1);
+
+    // Show continue arrow on last slide
+    continueEl.classList.toggle('visible', current === TOTAL - 1);
+
+    // Hide scroll hint after first advance
+    if (current > 0) hint.classList.add('hidden');
+  }
+
+  function onScroll() {
+    const rect     = track.getBoundingClientRect();
+    const trackH   = track.offsetHeight - window.innerHeight;
+    const scrolled = -rect.top;                    // how far into the track
+    const progress = Math.max(0, Math.min(1, scrolled / trackH));
+    const rawIdx   = Math.floor(progress * TOTAL);
+    const clampIdx = Math.min(rawIdx, TOTAL - 1);
+
+    if (clampIdx !== current) setSlide(clampIdx);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Dot click: scroll to that slide's position
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      const trackH  = track.offsetHeight - window.innerHeight;
+      const target  = track.offsetTop + (trackH * (i / TOTAL)) + 10;
+      window.scrollTo({ top: target, behavior: 'smooth' });
+    });
+  });
+
+  // Continue arrow: jump past the track
+  continueEl.addEventListener('click', () => {
+    const target = track.offsetTop + track.offsetHeight;
+    window.scrollTo({ top: target, behavior: 'smooth' });
+  });
+
+  // Init first slide visible
+  slides[0].classList.add('active');
+})();
+
 /* ── NAV SCROLL EFFECT ───────────────────────────── */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -53,67 +125,6 @@ document.querySelectorAll('.tab').forEach(tab => {
   });
 });
 
-/* ── PARTICLE CANVAS ─────────────────────────────── */
-(function initParticles() {
-  const container = document.getElementById('particles');
-  const canvas = document.createElement('canvas');
-  canvas.id = 'particleCanvas';
-  container.appendChild(canvas);
-  const ctx = canvas.getContext('2d');
-
-  let W, H, particles = [], animId;
-
-  function resize() {
-    W = canvas.width = container.offsetWidth;
-    H = canvas.height = container.offsetHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize, { passive: true });
-
-  const COUNT = window.innerWidth < 640 ? 28 : 55;
-
-  function rand(a, b) { return a + Math.random() * (b - a); }
-
-  for (let i = 0; i < COUNT; i++) {
-    particles.push({
-      x: rand(0, 1),
-      y: rand(0, 1),
-      r: rand(0.5, 2),
-      vx: rand(-0.06, 0.06),
-      vy: rand(-0.12, -0.04),
-      a: rand(0.1, 0.45),
-      da: rand(0.002, 0.005) * (Math.random() > 0.5 ? 1 : -1),
-    });
-  }
-
-  function tick() {
-    ctx.clearRect(0, 0, W, H);
-    particles.forEach(p => {
-      p.x += p.vx / W * 60;
-      p.y += p.vy / H * 60;
-      p.a += p.da;
-      if (p.a <= 0.05 || p.a >= 0.5) p.da *= -1;
-      if (p.y < -0.02) { p.y = 1.02; p.x = rand(0, 1); }
-      if (p.x < -0.02) p.x = 1.02;
-      if (p.x > 1.02) p.x = -0.02;
-
-      ctx.beginPath();
-      ctx.arc(p.x * W, p.y * H, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(212, 134, 10, ${p.a})`;
-      ctx.fill();
-    });
-    animId = requestAnimationFrame(tick);
-  }
-
-  // Pause when not visible to save battery
-  const heroSection = document.getElementById('home');
-  const obs = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting) { if (!animId) tick(); }
-    else { cancelAnimationFrame(animId); animId = null; }
-  });
-  obs.observe(heroSection);
-  tick();
-})();
 
 /* ── SMOOTH ANCHOR OFFSET ────────────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
