@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cool Beans Coffee — Cork City</title>
+  <meta name="description" content="Cool Beans Coffee — Cork's favourite independent coffee shop. Roasted in Cork by people with a passion for coffee. 13a Parnell Place, Cork City." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&family=Special+Elite&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo">
+        <span class="nav__logo-cool">Cool Beans</span>
+        <span class="nav__logo-sub">Coffee</span>
+      </a>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Find Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__particles" id="particles"></div>
+    <div class="hero__bulb hero__bulb--1"></div>
+    <div class="hero__bulb hero__bulb--2"></div>
+    <div class="hero__bulb hero__bulb--3"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal">Cork City's Independent Coffee House</p>
+      <h1 class="hero__title reveal delay-1">
+        Where Every Cup<br/><em>Tells a Story</em>
+      </h1>
+      <p class="hero__sub reveal delay-2">
+        Coffee roasted in Cork. Crafted with passion.<br/>Served with soul — since the very first bean.
+      </p>
+      <div class="hero__cta reveal delay-3">
+        <a href="#menu" class="btn btn--primary">Explore the Menu</a>
+        <a href="#contact" class="btn btn--ghost">Find Us</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text">
+          <span class="section-tag reveal">Our Story</span>
+          <h2 class="section-title reveal delay-1">A Passion for Coffee,<br/><em>Born in Cork</em></h2>
+          <p class="about__body reveal delay-2">
+            Tucked into the heart of Cork City on Parnell Place, Cool Beans Coffee is more than a café — it's a destination for those who believe great coffee changes the tone of a day.
+          </p>
+          <p class="about__body reveal delay-2">
+            We source, roast, and brew with obsessive care. From our signature espresso blends to single-origin pour-overs, every cup is a quiet act of craft. Our dark, warmly lit space — with its chalkboard walls and Edison glow — is a place to slow down, connect, and savour.
+          </p>
+          <div class="about__stats reveal delay-3">
+            <div class="stat">
+              <span class="stat__num">100%</span>
+              <span class="stat__label">Cork Roasted</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">7</span>
+              <span class="stat__label">Days a Week</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">1</span>
+              <span class="stat__label">Passion: Coffee</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__visual reveal delay-2">
+          <div class="about__frame">
+            <div class="about__chalkboard">
+              <div class="chalk-art">
+                <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="150" cy="130" r="60" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="4 4"/>
+                  <path d="M120 160 Q150 90 180 160" stroke="rgba(255,200,100,0.4)" stroke-width="2" fill="none"/>
+                  <ellipse cx="150" cy="165" rx="35" ry="12" stroke="rgba(255,200,100,0.4)" stroke-width="1.5" fill="none"/>
+                  <path d="M115 165 Q115 200 150 200 Q185 200 185 165" stroke="rgba(255,200,100,0.4)" stroke-width="1.5" fill="rgba(255,200,100,0.05)"/>
+                  <path d="M185 175 Q205 165 200 155 Q195 145 185 160" stroke="rgba(255,200,100,0.3)" stroke-width="1.5" fill="none"/>
+                  <path d="M155 130 Q165 115 155 110 Q148 108 152 120" stroke="rgba(255,255,255,0.25)" stroke-width="1" fill="none"/>
+                  <path d="M150 130 Q158 112 150 106" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
+                  <text x="150" y="240" text-anchor="middle" fill="rgba(255,200,100,0.5)" font-family="Georgia, serif" font-size="13" letter-spacing="3">COOL BEANS</text>
+                  <text x="150" y="258" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="Georgia, serif" font-size="9" letter-spacing="5">CORK</text>
+                </svg>
+              </div>
+            </div>
+            <div class="about__glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="menu__header">
+        <span class="section-tag reveal">What We Serve</span>
+        <h2 class="section-title reveal delay-1">The Menu</h2>
+        <p class="menu__sub reveal delay-2">Crafted with quality ingredients. Every item made with care.</p>
+      </div>
+
+      <div class="menu__tabs reveal delay-2">
+        <button class="tab active" data-tab="coffee">Coffee & Drinks</button>
+        <button class="tab" data-tab="food">Food</button>
+      </div>
+
+      <!-- COFFEE TAB -->
+      <div class="menu__panel active" id="tab-coffee">
+        <div class="menu__section-label">Espresso Bar</div>
+        <div class="menu__grid">
+          <div class="menu-item">
+            <div class="menu-item__name">Americano</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€2.90 / €3.50</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Espresso / Double</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€2.40 / €2.90</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Cappuccino</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€3.00 / €3.60</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Latte</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€3.60 / €4.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Flat White</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€3.60</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Macchiato / Double</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€3.40 / €3.90</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Mocha — Milk / White</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€4.00 / €4.30</div>
+          </div>
+        </div>
+
+        <div class="menu__section-label">Hot Drinks</div>
+        <div class="menu__grid">
+          <div class="menu-item">
+            <div class="menu-item__name">Barry's Tea</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€3.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Herbal Teas</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€3.50</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Chai Latte</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€3.80 / €4.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Matcha Latte</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€4.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Hot Chocolate — Milk / White</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€3.90 / €4.30</div>
+          </div>
+        </div>
+
+        <div class="menu__section-label">Cold &amp; Extras</div>
+        <div class="menu__grid">
+          <div class="menu-item">
+            <div class="menu-item__name">Juices</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€2.50</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Softies</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€2.50</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Extra Shot</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€0.50</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Alternative Milks</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€0.50</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Syrups / Whipped Cream / Marshmallows</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€0.50</div>
+          </div>
+        </div>
+
+        <div class="menu__section-label">Sweet Treats</div>
+        <div class="menu__grid">
+          <div class="menu-item">
+            <div class="menu-item__name">Croissant / Filled</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€2.50 / €3.50</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Cookies</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€2.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Muffins / Buns</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€3.90</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Treato</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€3.50</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Protein Balls</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€3.00</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOD TAB -->
+      <div class="menu__panel" id="tab-food">
+        <div class="menu__section-label">Bagels &amp; Baps</div>
+        <div class="menu__grid">
+          <div class="menu-item">
+            <div class="menu-item__name">Toast with Butter</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Toasted Bagel with Butter</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Toasted Bagel with Cream Cheese</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Toasted Bagel with Bacon &amp;/or Sausage</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Bap with Bacon &amp;/or Sausage</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Bap with Ham &amp; Cheese</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item menu-item--special">
+            <div class="menu-item__name">Bap Special <span class="tag">Signature</span></div>
+            <div class="menu-item__desc">Irish Ham, Cheddar Cheese, Tomato &amp; Onion</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Bagel with Ham &amp; Cheese</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item menu-item--special">
+            <div class="menu-item__name">Bagel Special <span class="tag">Signature</span></div>
+            <div class="menu-item__desc">Irish Ham, Cheddar Cheese, Tomato &amp; Onion</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+        </div>
+
+        <div class="menu__section-label">Sourdough &amp; Ciabatta</div>
+        <p class="menu__note">All served on Toasted Sourdough Bread or Ciabatta Baguette</p>
+        <div class="menu__grid">
+          <div class="menu-item">
+            <div class="menu-item__name">Ham &amp; Cheese</div>
+            <div class="menu-item__desc">Irish Ham &amp; Cheddar Cheese</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Toasted Special</div>
+            <div class="menu-item__desc">Irish Ham, Cheddar Cheese, Tomato &amp; Onion</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item menu-item--special">
+            <div class="menu-item__name">Cajun Chicken <span class="tag">Popular</span></div>
+            <div class="menu-item__desc">Cajun Chicken, Tomato, Cheddar Cheese, Rocket &amp; Chipotle Mayo</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">BLT</div>
+            <div class="menu-item__desc">Crispy Bacon, Tomato &amp; Rocket with Mayo</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Pastrami Melt</div>
+            <div class="menu-item__desc">Shaved Pastrami, Tomato, Cheddar Cheese, Rocket &amp; Mayo</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item menu-item--special">
+            <div class="menu-item__name">Chicken Pesto <span class="tag">Popular</span></div>
+            <div class="menu-item__desc">Roast Chicken, Pesto, Sundried Tomatoes, Rocket &amp; Mozzarella</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Vegetarian <span class="tag tag--green">V</span></div>
+            <div class="menu-item__desc">Avocado, Pesto, Sundried Tomatoes &amp; Rocket</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Grilled Mozzarella <span class="tag tag--green">V</span></div>
+            <div class="menu-item__desc">Grilled Mozzarella, Sundried Tomatoes, Rocket &amp; Pesto</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price"></div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__name">Sandos / Focaccias</div>
+            <div class="menu-item__dots"></div>
+            <div class="menu-item__price">€4.50</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <span class="section-tag reveal">The Vibe</span>
+      <h2 class="section-title reveal delay-1">Step Inside</h2>
+    </div>
+    <div class="gallery__grid">
+      <div class="gallery__item gallery__item--tall reveal">
+        <div class="gallery__img gallery__img--1">
+          <div class="gallery__chalk-label">The Bar</div>
+        </div>
+        <div class="gallery__overlay"><span>The Bar</span></div>
+      </div>
+      <div class="gallery__item reveal delay-1">
+        <div class="gallery__img gallery__img--2">
+          <div class="gallery__chalk-label">The Walls</div>
+        </div>
+        <div class="gallery__overlay"><span>The Walls</span></div>
+      </div>
+      <div class="gallery__item reveal delay-2">
+        <div class="gallery__img gallery__img--3">
+          <div class="gallery__chalk-label">Relax &amp; Stay</div>
+        </div>
+        <div class="gallery__overlay"><span>Relax</span></div>
+      </div>
+      <div class="gallery__item gallery__item--wide reveal delay-1">
+        <div class="gallery__img gallery__img--4">
+          <div class="gallery__chalk-label">The Space</div>
+        </div>
+        <div class="gallery__overlay"><span>The Space</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__info">
+          <span class="section-tag reveal">Come Visit</span>
+          <h2 class="section-title reveal delay-1">Find Us in<br/><em>Cork City</em></h2>
+          <div class="contact__details reveal delay-2">
+            <div class="contact__item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <div>
+                <strong>Address</strong>
+                <p>13a Parnell Place<br/>Cork City Centre<br/>Cork, T12 ED35</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div>
+                <strong>Opening Hours</strong>
+                <div class="hours">
+                  <div class="hours__row"><span>Monday – Friday</span><span>7am – 6pm</span></div>
+                  <div class="hours__row"><span>Saturday</span><span>7am – 6pm</span></div>
+                  <div class="hours__row"><span>Sunday</span><span>8am – 5pm</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="contact__item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <div>
+                <strong>Follow Us</strong>
+                <div class="social-links">
+                  <a href="https://www.instagram.com/thecoolbeancoffeecork/" target="_blank" rel="noopener" class="social-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    @thecoolbeancoffeecork
+                  </a>
+                  <a href="https://www.facebook.com/Coolbeanscoffeecork/" target="_blank" rel="noopener" class="social-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                    Cool Beans Coffee Cork
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact__map reveal delay-2">
+          <div class="map__wrapper">
+            <iframe
+              title="Cool Beans Coffee location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.4!2d-8.4683!3d51.8979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4844904c2e61c37b%3A0x1234!2s13a%20Parnell%20Pl%2C%20Cork%2C%20T12%20ED35!5e0!3m2!1sen!2sie!4v1620000000000!5m2!1sen!2sie"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="map__pin">
+              <div class="map__pin-dot"></div>
+              <div class="map__pin-ring"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">Cool Beans Coffee</span>
+          <p>Coffee roasted in Cork<br/>by people with a passion for coffee.</p>
+        </div>
+        <div class="footer__links">
+          <a href="#about">About</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Find Us</a>
+        </div>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/thecoolbeancoffeecork/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/Coolbeanscoffeecork/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 Cool Beans Coffee. 13a Parnell Place, Cork City.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
